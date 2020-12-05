@@ -1,4 +1,4 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+This is a [Next.js](https://nextjs.org/) template bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
 
@@ -6,25 +6,32 @@ First, run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
 
-## Learn More
+## Project Structure
 
-To learn more about Next.js, take a look at the following resources:
+Next.js pages go in `pages/`.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Reusable React components go in `components/`.
+If you have components that make up other components, but don't have any meaning on their own, they should go into `partials/`.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Images, SVGs, audio files, and any other media files that need to be available to the client should be put in `public/`.
 
-## Deploy on Vercel
+Config files, stylesheets, themes, and other constant data that needs to be shared across multiple pages/components go in `shared/`.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/import?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Testing files go in `test/`;
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Tooling
+
+[ESLint](https://eslint.org/) and [Prettier](https://prettier.io/) are built in, along with some rules that enforce best practices which you can customize.
+React, Typescript, a11y, and Next.js plugins for ESLint are also correctly configured.
+
+All of the code in this template uses [Typescript](https://www.typescriptlang.org/) exclusively.
+
+This project is set up with [TailwindCSS](https://tailwindcss.com/) and [Stylelint](https://stylelint.io/) for custom utilities or extracted components.
+
+Note: testing libraries are not included as Next.js project vary wildly in implementation. If you want testing, you can install a library like Jest along with the Typescript typings. You will need to provide your own Jest config, but ESLint rules for Jest are already included.
